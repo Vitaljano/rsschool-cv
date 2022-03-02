@@ -21,7 +21,7 @@
 
 > - I knew what is IE 6 and Table layout
 > - I like IT technologies
-> - I think practice is the best way to learn programming
+> - I think practice is the best way to learn to program
 > - I like learning something new
 
 ### Education:

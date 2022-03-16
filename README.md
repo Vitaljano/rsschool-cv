@@ -1,1 +1,1 @@
-# rsschool-cv
+https://Vitaljano.github.io/rsschool-cv/

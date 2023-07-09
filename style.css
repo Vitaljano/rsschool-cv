@@ -9,14 +9,12 @@ body {
   font-size: 1.25rem;
   font-family: "Titillium Web", sans-serif;
   font-weight: 600;
-  font-display: swap;
   margin: 0;
   padding: 0;
 }
 
 .container {
   margin: 0 auto;
-  /* width: 100%; */
   max-width: 1200px;
   height: 100svh;
   display: grid;
@@ -29,12 +27,11 @@ h2 {
   font-size: 1.88rem;
   font-family: "Righteous", sans-serif;
   font-weight: 400;
-  font-display: swap;
   display: inline-block;
 }
 
 h1 {
-  font-weight: 35rem;
+  font-weight: 600;
   margin: 0;
   line-height: 1.5rem;
 }
@@ -54,45 +51,49 @@ h3 {
   align-items: start;
   padding-top: 3.13rem;
   padding-left: 3.13rem;
+}
 
-  & .aside__item {
-    width: 90%;
-  }
-  & h2::after {
-    content: "";
-    width: 100%;
-    height: 0.13rem;
-    display: block;
-    position: relative;
-    transition: --fill-percentage 0.3s ease-in-out;
-    background: linear-gradient(
-      to right,
-      var(--accent) var(--fill-percentage),
-      var(--light) 0%
-    );
-  }
+.aside__item {
+  width: 90%;
+}
 
-  & .aside__item:hover h2::after {
-    --fill-percentage: 150%;
-  }
+.aside__item:hover h2::after {
+  --fill-percentage: 150%;
+}
+
+.aside h2::after {
+  content: "";
+  width: 100%;
+  height: 0.13rem;
+  display: block;
+  position: relative;
+  transition: --fill-percentage 0.3s ease-in-out;
+  background: linear-gradient(
+    to right,
+    var(--accent) var(--fill-percentage),
+    var(--light) 0%
+  );
 }
 
 .contact-list {
   list-style: none;
   padding: 0;
   margin: 0;
-  & li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.63rem;
-    & a {
-      margin-left: 0.63rem;
-      color: var(--light);
-      text-decoration: none;
-      font-size: 1rem;
-      font-family: "Titillium Web", sans-serif;
-    }
-  }
+
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.63rem;
+}
+
+.contact-list li a{
+  margin-left: 0.63rem;
+  color: var(--light);
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: "Titillium Web", sans-serif;
 }
 
 .skills__icons {
@@ -108,68 +109,71 @@ h3 {
   list-style: none;
   margin: 0;
   padding: 0;
+}
 
-  & .language__item {
-    & .language__item--level {
-      background-color: var(--light);
-      display: inline-block;
-      width: 100%;
-      height: 0.25rem;
-    }
-    & .language__item--level::after {
-      content: "";
-      display: block;
-      height: 0.25rem;
-      background-color: var(--accent);
-    }
-  }
 
-  & .language__item:nth-child(1) .language__item--level::after {
-    width: 50%;
-  }
-  & .language__item:nth-child(2) .language__item--level::after {
-    width: 100%;
-  }
-  & .language__item:nth-child(3) .language__item--level::after {
-    width: 90%;
-  }
-  & .language__item:nth-child(4) .language__item--level::after {
-    width: 80%;
-  }
+.language__item--level {
+  background-color: var(--light);
+  display: inline-block;
+  width: 100%;
+  height: 0.25rem;
+}
+
+.language__item--level::after {
+  content: "";
+  display: block;
+  height: 0.25rem;
+  background-color: var(--accent);
+}
+
+
+.language .language__item:nth-child(1) .language__item--level::after {
+  width: 50%;
+}
+.language .language__item:nth-child(2) .language__item--level::after {
+  width: 100%;
+}
+.language .language__item:nth-child(3) .language__item--level::after {
+  width: 90%;
+}
+.language .language__item:nth-child(4) .language__item--level::after {
+  width: 80%;
 }
 
 .hobby {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 1.25rem 0.63rem;
+  grid-gap: 1.25rem 1.25rem;
+}
 
-  .hobby__item button {
-    background-color: var(--light);
-    padding: 0.43rem;
-    border-radius: 0.25rem;
-    border: none;
-    cursor: pointer;
-  }
+.hobby__item {
+  background-color: var(--light);
+  padding: 0.43rem;
+  border-radius: 0.25rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .resume {
   padding-right: 1.25rem;
   padding-top: 3.13rem;
   padding-left: 3.13rem;
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.25rem;
-    & h2 {
-      margin: 0;
-    }
-  }
+
 }
 
-.popover {
-  max-width: 1000px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+
+}
+
+header h2 {
+  margin: 0;
 }
 
 @property --fill-percentage {
